@@ -1,0 +1,129 @@
+{
+  "environment": "development",
+  "log_directory": "logs",
+  "global_log_level": "DEBUG",
+  "retention_policy": {
+    "max_file_size_mb": 100,
+    "max_files_per_component": 10,
+    "days_to_keep": 30,
+    "compress_old_logs": true
+  },
+  "format_config": {
+    "include_timestamp": true,
+    "include_session_id": true,
+    "include_correlation_id": true,
+    "include_memory_usage": true,
+    "include_execution_time": true,
+    "json_format": true,
+    "pretty_print": false
+  },
+  "component_configs": {
+    "api_server": {
+      "log_level": "DEBUG",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "gemini_generator": {
+      "log_level": "DEBUG",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "thumbnail_generator": {
+      "log_level": "DEBUG",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "session_manager": {
+      "log_level": "INFO",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "progress_manager": {
+      "log_level": "INFO",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "file_validator": {
+      "log_level": "INFO",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "pipeline_stage": {
+      "log_level": "DEBUG",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "frontend": {
+      "log_level": "DEBUG",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    },
+    "system": {
+      "log_level": "INFO",
+      "enabled": true,
+      "destinations": [
+        "console",
+        "file"
+      ],
+      "custom_format": null
+    }
+  },
+  "remote_config": {
+    "enabled": false,
+    "endpoint": null,
+    "api_key": null,
+    "batch_size": 100,
+    "batch_timeout_seconds": 30
+  },
+  "alert_config": {
+    "enabled": false,
+    "email_recipients": [],
+    "slack_webhook": null,
+    "error_threshold": 10,
+    "critical_threshold": 5,
+    "time_window_minutes": 15
+  },
+  "sensitive_data_patterns": [
+    "password",
+    "token",
+    "api_key",
+    "secret",
+    "authorization",
+    "cookie",
+    "session_token",
+    "private_key",
+    "client_secret"
+  ]
+}

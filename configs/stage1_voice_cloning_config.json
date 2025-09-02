@@ -1,0 +1,26 @@
+{
+    "whisper_model": "base",
+    "enable_diarization": true,
+    "enable_emotion": true,
+    "enable_voice_cloning": true,
+    "language": "en",
+    "voice_model": "tts_models/multilingual/multi-dataset/your_tts",
+    "voice_cloning_settings": {
+        "encoder_model": "resemblyzer",
+        "min_audio_length": 1.0,
+        "max_speakers": 10,
+        "embedding_size": 256,
+        "clone_samples_per_speaker": 5
+    },
+    "synthesis_settings": {
+        "temperature": 0.7,
+        "speed": 1.0,
+        "emotion_strength": 0.8
+    },
+    "supported_languages": ["en", "es", "fr", "de", "it", "pt", "pl", "tr", "ru", "nl", "cs", "ar", "zh", "ja", "ko"],
+    "quality_settings": {
+        "sample_rate": 22050,
+        "use_cuda": true,
+        "batch_size": 16
+    }
+}

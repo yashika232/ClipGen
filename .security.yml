@@ -1,0 +1,73 @@
+# Security Configuration for Video Synthesis Pipeline
+# This file defines security policies and constraints
+
+security:
+  # File Upload Security
+  upload_limits:
+    max_image_size_mb: 10
+    max_audio_size_mb: 50
+    allowed_image_extensions: ['.jpg', '.jpeg', '.png', '.bmp']
+    allowed_audio_extensions: ['.wav', '.mp3', '.flac', '.m4a']
+    quarantine_suspicious_files: true
+  
+  # Input Validation
+  text_processing:
+    max_text_length: 10000
+    blocked_characters: ['<', '>', '&', '"', "'", ';', '|', '`', '$', '\\']
+    sanitize_unicode: true
+    strip_control_characters: true
+  
+  # File System Security
+  file_system:
+    temp_dir_prefix: "talking_head_secure_"
+    auto_cleanup_temp_files: true
+    prevent_path_traversal: true
+    restricted_paths: ['/etc', '/usr', '/bin', '/sbin', '/root']
+  
+  # Process Security
+  execution:
+    timeout_seconds: 1800
+    max_memory_mb: 8192
+    allowed_subprocess_commands: ['python', 'python3']
+    disable_shell_execution: true
+    sandbox_execution: true
+  
+  # Network Security
+  network:
+    disable_external_requests: true
+    allowed_domains: []
+    block_local_network_access: true
+  
+  # Logging and Monitoring
+  monitoring:
+    log_security_events: true
+    log_file_operations: true
+    log_subprocess_execution: true
+    alert_on_suspicious_activity: true
+  
+  # Data Protection
+  data_protection:
+    encrypt_temp_files: false  # Set to true for production
+    secure_delete_temp_files: true
+    disable_core_dumps: true
+    clear_memory_on_exit: true
+
+# Rate Limiting (for production deployment)
+rate_limiting:
+  enabled: false  # Enable in production
+  requests_per_minute: 10
+  requests_per_hour: 100
+  requests_per_day: 500
+
+# Audit Configuration
+audit:
+  enabled: true
+  log_level: "INFO"
+  log_file: "logs/security_audit.log"
+  retention_days: 90
+  
+# Emergency Response
+emergency:
+  kill_switch_enabled: true
+  emergency_contact: "security@company.com"
+  incident_response_plan: "docs/incident_response.md"

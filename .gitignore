@@ -1,0 +1,233 @@
+# Video Synthesis Pipeline - GitHub .gitignore
+
+# ==========================================
+# LARGE FILES & MODELS (GitHub size limits)
+# ==========================================
+
+# Moved to nonuseful/ folder
+nonuseful/
+
+# AI Models and Weights (GB of data)
+real_models/
+models/
+weights/
+gfpgan/
+
+# Large datasets
+datasets/s1/
+datasets/voxceleb2/
+datasets/processed/
+datasets/raw/
+
+# ==========================================
+# GENERATED & OUTPUT FILES
+# ==========================================
+
+# Generated media files
+generated_thumbnails/
+thumbnails/
+final_output/
+outputs/
+processed/
+enhanced/
+final/
+uploads/
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Audio files  
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# Image files (except essential ones)
+*.png
+*.jpg
+*.jpeg
+!Q.jpg
+!MY.wav
+
+# ==========================================
+# TEMPORARY & LOG FILES
+# ==========================================
+
+# Log files
+*.log
+logs/
+temp/
+metadata/
+
+# ==========================================
+# ENVIRONMENT & CONFIG FILES
+# ==========================================
+
+# Environment files with API keys
+.env
+.env.local
+.env.production
+.env.staging
+*.secret
+*.key
+*.pem
+*.p12
+config.ini
+secrets.json
+
+# Config files with sensitive data
+config.json
+
+# ==========================================
+# PYTHON & DEVELOPMENT
+# ==========================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# ==========================================
+# FRONTEND (Node.js/React)
+# ==========================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.vite/
+.next/
+
+# Runtime files
+.cache/
+coverage/
+
+# ==========================================
+# IDE & OS FILES
+# ==========================================
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# VS Code extensions
+*.vsix
+
+# MacOS files
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux files
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ==========================================
+# DEBUG & LEGACY FILES
+# ==========================================
+
+# Debug directories
+debug_*/
+test_*/
+useless_files/
+main_directory_legacy/
+fixed_sadtalker/
+legacy_docs/
+
+# Test files
+test_*.py
+test_*.mp4
+minimal_*.py
+debug_*.py
+fix_*.py
+
+# Text dumps and lists
+*.txt
+
+# ==========================================
+# AI PIPELINE SPECIFIC
+# ==========================================
+
+# Model checkpoints
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# Temporary processing files
+temp_*/
+processing_*/
+cache_*/
+results/
+
+# Session data
+sessions/
+session_*/
+
+# Process IDs and locks
+*.pid
+*.lock
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json

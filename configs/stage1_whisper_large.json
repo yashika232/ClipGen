@@ -1,0 +1,48 @@
+{
+  "whisper_model": "large",
+  "whisper": {
+    "model": "large",
+    "language": "en",
+    "task": "transcribe",
+    "temperature": 0,
+    "best_of": 5,
+    "beam_size": 5,
+    "patience": 1.0,
+    "length_penalty": 1.0,
+    "suppress_tokens": "-1",
+    "condition_on_previous_text": true,
+    "fp16": false,
+    "compression_ratio_threshold": 2.4,
+    "logprob_threshold": -1.0,
+    "no_speech_threshold": 0.6,
+    "initial_prompt": null,
+    "word_timestamps": true,
+    "verbose": false
+  },
+  "audio_processing": {
+    "normalize": true,
+    "sample_rate": 16000,
+    "chunk_length": 30,
+    "overlap": 0
+  },
+  "features": {
+    "mfcc": {
+      "n_mfcc": 13,
+      "n_fft": 2048,
+      "hop_length": 512
+    },
+    "mel_spectrogram": {
+      "n_mels": 128,
+      "n_fft": 2048,
+      "hop_length": 512
+    }
+  },
+  "n_mfcc": 13,
+  "n_mels": 128,
+  "n_fft": 2048,
+  "hop_length": 512,
+  "window": "hann",
+  "center": true,
+  "pad_mode": "constant",
+  "power": 2.0
+}

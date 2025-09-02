@@ -1,0 +1,129 @@
+{
+    "metadata": {
+        "config_version": "2.0",
+        "optimized_for": "Apple Silicon M4 Max",
+        "target_quality": "High-quality 1080p with face restoration",
+        "estimated_performance": "15-30 minutes processing time",
+        "created_date": "2025-07-06",
+        "description": "Production-ready configuration optimized for Apple Silicon hardware with maximum quality output"
+    },
+    "sadtalker": {
+        "size": 512,
+        "expression_scale": 1.8,
+        "pose_style": 0,
+        "ref_eyeblink": null,
+        "ref_pose": null,
+        "still": false,
+        "preprocess": "resize",
+        "verbose": true,
+        "old_version": false,
+        "net_recon": "resnet50",
+        "init_path": null,
+        "use_safetensor": true,
+        "face3dvis": false,
+        "use_idle_mode": false,
+        "length_of_audio": 0,
+        "use_blink": true
+    },
+    "face_enhancement": {
+        "enable_gfpgan": true,
+        "enable_background_enhancer": true,
+        "enable_codeformer": true,
+        "enhancer": "gfpgan",
+        "background_enhancer": "realesrgan",
+        "upscale_factor": 2,
+        "face_enhance_strength": 0.9,
+        "background_enhance_strength": 0.8,
+        "codeformer_fidelity": 0.7,
+        "codeformer_path": null
+    },
+    "preprocessing": {
+        "face_crop_size": [512, 512],
+        "image_resize": true,
+        "max_image_size": 1024,
+        "detect_face": true,
+        "face_enhancement": true,
+        "image_quality_check": true,
+        "auto_crop_face": true,
+        "crop_margin": 0.3,
+        "face_detection_confidence": 0.7
+    },
+    "output": {
+        "video_format": "mp4",
+        "video_codec": "libx264",
+        "video_quality": "high",
+        "fps": 25,
+        "audio_codec": "aac",
+        "audio_bitrate": "128k",
+        "crf": 15,
+        "preset": "medium",
+        "target_resolution": "1080p"
+    },
+    "postprocessing": {
+        "face_restoration": true,
+        "temporal_consistency": true,
+        "motion_smoothing": true,
+        "color_correction": true,
+        "noise_reduction": true,
+        "stabilization": false,
+        "sharpening": 0.3,
+        "contrast_enhancement": 0.2,
+        "enable_realesrgan": true,
+        "realesrgan_scale": 2
+    },
+    "animation": {
+        "input_yaw": null,
+        "input_pitch": null,
+        "input_roll": null,
+        "expression_intensity": 1.0,
+        "head_motion_scale": 1.0,
+        "eye_blink_intensity": 1.0,
+        "mouth_motion_scale": 1.0
+    },
+    "performance": {
+        "use_gpu": true,
+        "device": "auto",
+        "enable_mps": true,
+        "enable_mps_fallback": true,
+        "memory_fraction": 0.9,
+        "batch_size": 1,
+        "num_workers": 4,
+        "prefetch_factor": 2,
+        "pin_memory": true,
+        "optimize_for_apple_silicon": true
+    },
+    "gpu_optimization": {
+        "use_opencv_instead_of_pil": true,
+        "enable_memory_efficient_processing": true,
+        "batch_frame_processing": true,
+        "gpu_memory_management": "auto",
+        "fallback_to_cpu_on_oom": true
+    },
+    "quality_targets": {
+        "output_resolution": "1080p",
+        "min_face_resolution": 512,
+        "target_processing_time_minutes": 20,
+        "max_processing_time_minutes": 30,
+        "quality_vs_speed_balance": "balanced"
+    },
+    "debugging": {
+        "save_intermediate_frames": false,
+        "save_debug_images": false,
+        "save_face_crops": false,
+        "save_coefficients": false,
+        "verbose_output": true,
+        "enable_progress_tracking": true,
+        "log_performance_metrics": true
+    },
+    "model_paths": {
+        "sadtalker_checkpoints": "models/SadTalker/checkpoints",
+        "gfpgan_weights": "models/SadTalker/gfpgan/weights",
+        "face_detection_model": "models/SadTalker/checkpoints/shape_predictor_68_face_landmarks.dat",
+        "realesrgan_weights": "weights/RealESRGAN_x2plus.pth"
+    },
+    "conda_environments": {
+        "sadtalker_env": "/Users/aryanjain/miniforge3/envs/sadtalker/bin/python",
+        "realesrgan_env": "/Users/aryanjain/miniforge3/envs/realesrgan/bin/python",
+        "use_isolated_environments": true
+    }
+}

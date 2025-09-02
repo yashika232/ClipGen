@@ -1,0 +1,27 @@
+{
+  "whisper": {
+    "model_size": "base",
+    "language": "en",
+    "word_timestamps": true,
+    "verbose": false
+  },
+  "audio_processing": {
+    "sample_rate": 16000,
+    "n_mfcc": 13,
+    "n_mels": 80,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "normalize": true
+  },
+  "features": {
+    "mfcc": true,
+    "mel_spectrogram": true,
+    "spectral_features": true,
+    "zero_crossing_rate": true,
+    "rms_energy": true
+  },
+  "output": {
+    "save_detailed_transcript": true,
+    "feature_format": "npy"
+  }
+}

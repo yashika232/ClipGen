@@ -1,0 +1,27 @@
+{
+  "mediapipe": {
+    "max_num_faces": 1,
+    "refine_landmarks": true,
+    "min_detection_confidence": 0.8,
+    "min_tracking_confidence": 0.8,
+    "static_image_mode": false
+  },
+  "face_analysis": {
+    "target_landmarks": 468,
+    "enable_3d_coefficients": true,
+    "normalize_coordinates": true,
+    "smooth_landmarks": true,
+    "use_dlib_landmarks": true
+  },
+  "processing": {
+    "batch_size": 16,
+    "progress_interval": 10,
+    "skip_frames_without_face": false,
+    "face_crop_margin": 0.3
+  },
+  "output": {
+    "save_metadata": true,
+    "save_debug_images": true,
+    "save_face_crops": true
+  }
+}

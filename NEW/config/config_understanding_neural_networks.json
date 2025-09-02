@@ -1,0 +1,80 @@
+{
+  "user_preferences": {
+    "title": "Understanding Neural Networks",
+    "topic": "backpropagation algorithm",
+    "audience": "junior engineers",
+    "tone": "professional",
+    "emotion": "confident",
+    "content_type": "Tutorial",
+    "additional_context": "",
+    "quality_level": "high",
+    "output_resolution": "1080p",
+    "audio_quality": "high",
+    "use_gpu_acceleration": true,
+    "enable_chunked_processing": true,
+    "enable_enhancement": true,
+    "enable_background_animation": true,
+    "custom_voice_parameters": {},
+    "custom_animation_parameters": {},
+    "custom_enhancement_parameters": {}
+  },
+  "available_tones": [
+    "professional",
+    "friendly",
+    "motivational",
+    "casual",
+    "academic",
+    "conversational"
+  ],
+  "available_emotions": [
+    "inspired",
+    "confident",
+    "curious",
+    "excited",
+    "calm",
+    "enthusiastic",
+    "thoughtful"
+  ],
+  "available_audiences": [
+    "junior engineers",
+    "senior engineers",
+    "new hires",
+    "students",
+    "professionals",
+    "managers",
+    "general audience",
+    "technical audience"
+  ],
+  "available_content_types": [
+    "Short-Form Video Reel",
+    "Tutorial",
+    "Lecture",
+    "Presentation",
+    "Explanation"
+  ],
+  "voice_parameter_mapping": {
+    "voice_parameters": {
+      "temperature": 0.7,
+      "speed": 1.0,
+      "repetition_penalty": 1.1,
+      "voice_clarity": 0.9
+    }
+  },
+  "animation_parameter_mapping": {
+    "animation_parameters": {
+      "expression_scale": 1.2,
+      "face_animation_strength": 1.2,
+      "emotion_intensity": 0.9
+    }
+  },
+  "enhancement_parameter_mapping": {
+    "enhancement_parameters": {
+      "realesrgan_scale": 2,
+      "codeformer_fidelity": 0.8,
+      "enable_temporal_consistency": true
+    }
+  },
+  "enable_fallback_mechanisms": false,
+  "max_processing_time": 3600,
+  "enable_debug_logging": false
+}

@@ -1,0 +1,25 @@
+{
+  "model": {
+    "type": "wav2lip_simplified",
+    "device": "auto",
+    "batch_size": 16,
+    "checkpoint_path": null
+  },
+  "preprocessing": {
+    "face_crop_size": [96, 96],
+    "audio_window_size": 16,
+    "overlap": 0.5,
+    "padding": "constant"
+  },
+  "generation": {
+    "smooth_factor": 0.8,
+    "blend_ratio": 0.7,
+    "quality_threshold": 0.5,
+    "use_face_restoration": true
+  },
+  "output": {
+    "video_codec": "mp4v",
+    "video_quality": 95,
+    "fps": null
+  }
+}

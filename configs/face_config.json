@@ -1,0 +1,24 @@
+{
+  "mediapipe": {
+    "max_num_faces": 1,
+    "refine_landmarks": true,
+    "min_detection_confidence": 0.5,
+    "min_tracking_confidence": 0.5,
+    "static_image_mode": false
+  },
+  "face_analysis": {
+    "target_landmarks": 68,
+    "enable_3d_coefficients": true,
+    "normalize_coordinates": true,
+    "smooth_landmarks": true
+  },
+  "processing": {
+    "batch_size": 32,
+    "progress_interval": 30,
+    "skip_frames_without_face": false
+  },
+  "output": {
+    "save_metadata": true,
+    "save_debug_images": false
+  }
+}

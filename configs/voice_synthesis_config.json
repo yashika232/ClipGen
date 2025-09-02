@@ -1,0 +1,81 @@
+{
+    "tts_model": {
+        "model_name": "tts_models/multilingual/multi-dataset/xtts_v2",
+        "use_cuda": true,
+        "language": "en",
+        "speed": 1.0,
+        "temperature": 0.7,
+        "length_penalty": 1.0,
+        "repetition_penalty": 1.1,
+        "top_k": 50,
+        "top_p": 0.85,
+        "do_sample": true
+    },
+    "voice_cloning": {
+        "min_audio_length": 5.0,
+        "max_audio_length": 30.0,
+        "target_sample_rate": 22050,
+        "normalize_audio": true,
+        "remove_silence": true,
+        "speaker_embedding_dim": 512,
+        "voice_similarity_threshold": 0.75,
+        "clone_samples_per_speaker": 5
+    },
+    "audio_processing": {
+        "sample_rate": 22050,
+        "bit_depth": 16,
+        "channels": 1,
+        "format": "wav",
+        "noise_reduction": true,
+        "voice_activity_detection": true,
+        "high_pass_filter": 80.0,
+        "low_pass_filter": 8000.0
+    },
+    "synthesis": {
+        "chunk_size": 250,
+        "overlap_size": 25,
+        "add_silence": 0.5,
+        "emotion_strength": 0.8,
+        "speaking_rate": 1.0,
+        "enable_ssml": false,
+        "punctuation_pause": {
+            ".": 0.6,
+            ",": 0.3,
+            ";": 0.4,
+            ":": 0.4,
+            "!": 0.7,
+            "?": 0.7
+        }
+    },
+    "quality": {
+        "enable_enhancement": true,
+        "vocal_isolation": true,
+        "noise_reduction": true,
+        "noise_gate_threshold": -40,
+        "dynamic_range_compression": true,
+        "limiter_threshold": -1.0,
+        "normalization_target": -23.0
+    },
+    "languages": {
+        "supported": [
+            "en", "es", "fr", "de", "it", "pt", "pl", "tr", "ru", "nl", 
+            "cs", "ar", "zh-cn", "ja", "ko", "hu", "hi"
+        ],
+        "auto_detect": true,
+        "fallback_language": "en"
+    },
+    "performance": {
+        "batch_size": 1,
+        "use_gpu": true,
+        "memory_fraction": 0.8,
+        "cache_models": true,
+        "parallel_synthesis": false
+    },
+    "output": {
+        "save_intermediate_files": false,
+        "save_speaker_embedding": true,
+        "save_processing_metadata": true,
+        "audio_format": "wav",
+        "compression_quality": 95
+    }
+}

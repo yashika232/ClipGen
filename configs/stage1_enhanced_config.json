@@ -1,0 +1,28 @@
+{
+    "whisper_model": "base",
+    "enable_diarization": true,
+    "enable_emotion": true,
+    "language": "en",
+    "vad_settings": {
+        "energy_threshold": 0.5,
+        "min_speech_duration": 0.1
+    },
+    "diarization_settings": {
+        "min_speakers": 1,
+        "max_speakers": 10
+    },
+    "emotion_settings": {
+        "model": "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition",
+        "emotions": ["angry", "calm", "disgust", "fearful", "happy", "neutral", "sad", "surprised"]
+    },
+    "prosody_settings": {
+        "pitch_min": 50,
+        "pitch_max": 500,
+        "extract_rhythm": true
+    },
+    "feature_settings": {
+        "n_mfcc": 13,
+        "n_mels": 128,
+        "include_deltas": true
+    }
+}

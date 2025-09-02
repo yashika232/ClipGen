@@ -1,0 +1,289 @@
+{
+  "test_timestamp": "2025-07-14T23:13:34.364526",
+  "tests_run": 7,
+  "tests_passed": 6,
+  "tests_failed": 1,
+  "test_details": {
+    "initialization": {
+      "test_name": "initialization",
+      "start_time": "2025-07-14T23:13:34.364687",
+      "success": true,
+      "error": null,
+      "details": {
+        "success": true,
+        "base_dir": "/Users/aryanjain/Documents/video-synthesis-pipeline copy",
+        "integrated_pipeline_dir": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE",
+        "conda_environments": [
+          "sadtalker",
+          "video_audio_processing"
+        ],
+        "stage_scripts": [
+          "metadata_reader",
+          "script_processor",
+          "emotion_mapper",
+          "xtts_stage",
+          "insightface_stage",
+          "sadtalker_stage",
+          "realesrgan_stage",
+          "codeformer_stage",
+          "final_assembly_stage",
+          "main_pipeline"
+        ]
+      },
+      "duration": 0.000809,
+      "end_time": "2025-07-14T23:13:34.365499"
+    },
+    "environment_validation": {
+      "test_name": "environment_validation",
+      "start_time": "2025-07-14T23:13:34.365526",
+      "success": true,
+      "error": null,
+      "details": {
+        "success": true,
+        "validation_result": {
+          "valid": true,
+          "errors": [],
+          "warnings": [
+            "Conda environment 'xtts' not found",
+            "Conda environment 'enhancement' not found",
+            "Conda environment 'manim' not found"
+          ],
+          "environment_status": {
+            "integrated_pipeline": true,
+            "src_directory": true,
+            "conda_xtts": false,
+            "conda_sadtalker": true,
+            "conda_enhancement": false,
+            "conda_manim": false,
+            "conda_video_audio_processing": true,
+            "script_metadata_reader": true,
+            "script_script_processor": true,
+            "script_emotion_mapper": true,
+            "script_xtts_stage": true,
+            "script_insightface_stage": true,
+            "script_sadtalker_stage": true,
+            "script_realesrgan_stage": true,
+            "script_codeformer_stage": true,
+            "script_final_assembly_stage": true,
+            "script_main_pipeline": true
+          }
+        },
+        "environment_valid": true,
+        "error_count": 0,
+        "warning_count": 3
+      },
+      "duration": 0.001404,
+      "end_time": "2025-07-14T23:13:34.366932"
+    },
+    "metadata_synchronization": {
+      "test_name": "metadata_synchronization",
+      "start_time": "2025-07-14T23:13:34.366956",
+      "success": true,
+      "error": null,
+      "details": {
+        "success": true,
+        "sync_result": {
+          "success": true,
+          "integrated_metadata_path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/output/metadata/latest_metadata.json",
+          "synced_fields": [
+            "title",
+            "topic",
+            "audience",
+            "tone",
+            "emotion",
+            "content_type",
+            "additional_context",
+            "script_generated",
+            "face_image_path",
+            "voice_sample_path",
+            "session_id",
+            "created_at",
+            "new_metadata_source"
+          ]
+        },
+        "synced_metadata_size": 13,
+        "synced_fields": [
+          "title",
+          "topic",
+          "audience",
+          "tone",
+          "emotion",
+          "content_type",
+          "additional_context",
+          "script_generated",
+          "face_image_path",
+          "voice_sample_path",
+          "session_id",
+          "created_at",
+          "new_metadata_source"
+        ]
+      },
+      "duration": 0.000828,
+      "end_time": "2025-07-14T23:13:34.367786"
+    },
+    "conda_environment_detection": {
+      "test_name": "conda_environment_detection",
+      "start_time": "2025-07-14T23:13:34.367814",
+      "success": true,
+      "error": null,
+      "details": {
+        "success": true,
+        "detected_environments": 2,
+        "total_environments": 5,
+        "detection_rate": 0.4,
+        "environment_status": {
+          "xtts": {
+            "detected": false,
+            "python_path": null,
+            "python_exists": false
+          },
+          "sadtalker": {
+            "detected": true,
+            "python_path": "/Users/aryanjain/miniforge3/envs/sadtalker/bin/python",
+            "python_exists": true
+          },
+          "enhancement": {
+            "detected": false,
+            "python_path": null,
+            "python_exists": false
+          },
+          "manim": {
+            "detected": false,
+            "python_path": null,
+            "python_exists": false
+          },
+          "video_audio_processing": {
+            "detected": true,
+            "python_path": "/Users/aryanjain/miniforge3/envs/video-audio-processing/bin/python",
+            "python_exists": true
+          }
+        }
+      },
+      "duration": 0.00012,
+      "end_time": "2025-07-14T23:13:34.367936"
+    },
+    "stage_script_detection": {
+      "test_name": "stage_script_detection",
+      "start_time": "2025-07-14T23:13:34.367962",
+      "success": true,
+      "error": null,
+      "details": {
+        "success": true,
+        "found_scripts": 10,
+        "total_scripts": 10,
+        "script_availability": 1.0,
+        "script_status": {
+          "metadata_reader": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/metadata_reader.py",
+            "size": 7467
+          },
+          "script_processor": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/script_processor.py",
+            "size": 19738
+          },
+          "emotion_mapper": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/emotion_mapper.py",
+            "size": 17354
+          },
+          "xtts_stage": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/xtts_stage.py",
+            "size": 17903
+          },
+          "insightface_stage": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/insightface_stage.py",
+            "size": 16945
+          },
+          "sadtalker_stage": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/sadtalker_stage.py",
+            "size": 27094
+          },
+          "realesrgan_stage": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/realesrgan_stage.py",
+            "size": 17347
+          },
+          "codeformer_stage": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/codeformer_stage.py",
+            "size": 19199
+          },
+          "final_assembly_stage": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/final_assembly_stage.py",
+            "size": 15747
+          },
+          "main_pipeline": {
+            "exists": true,
+            "path": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/main_pipeline.py",
+            "size": 19104
+          }
+        }
+      },
+      "duration": 0.000191,
+      "end_time": "2025-07-14T23:13:34.368155"
+    },
+    "complete_pipeline_execution": {
+      "test_name": "complete_pipeline_execution",
+      "start_time": "2025-07-14T23:13:34.368178",
+      "success": false,
+      "error": "Return code 1",
+      "details": {
+        "success": false,
+        "error": "Return code 1",
+        "pipeline_result": {
+          "success": false,
+          "stage": "main_pipeline",
+          "environment": "video_audio_processing",
+          "processing_time": 2.050740957260132,
+          "error": "Return code 1",
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/main_pipeline.py\", line 23, in <module>\n    from insightface_stage import InsightFaceStage\n  File \"/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/src/insightface_stage.py\", line 10, in <module>\n    import cv2\nModuleNotFoundError: No module named 'cv2'\n"
+        }
+      },
+      "duration": 2.051207,
+      "end_time": "2025-07-14T23:13:36.419392"
+    },
+    "output_collection": {
+      "test_name": "output_collection",
+      "start_time": "2025-07-14T23:13:36.419440",
+      "success": true,
+      "error": null,
+      "details": {
+        "success": true,
+        "outputs_found": 3,
+        "output_directory": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/output",
+        "outputs": {
+          "xtts": {
+            "latest_file": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/output/xtts/.DS_Store",
+            "file_size": 6148,
+            "modified_time": "2025-07-10T14:20:43.326679"
+          },
+          "insightface": {
+            "latest_file": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/output/insightface/insightface_stage_results_1752140142.json",
+            "file_size": 4365,
+            "modified_time": "2025-07-10T17:35:42.648766"
+          },
+          "sadtalker": {
+            "latest_file": "/Users/aryanjain/Documents/video-synthesis-pipeline copy/INTEGRATED_PIPELINE/output/sadtalker/.DS_Store",
+            "file_size": 26628,
+            "modified_time": "2025-07-12T03:13:24.011754"
+          }
+        }
+      },
+      "duration": 0.010607,
+      "end_time": "2025-07-14T23:13:36.430050"
+    }
+  },
+  "overall_success": false,
+  "recommendations": [
+    "Address environment validation warnings",
+    "Install missing conda environments for complete functionality",
+    "Complete pipeline execution failed - check logs for details"
+  ]
+}

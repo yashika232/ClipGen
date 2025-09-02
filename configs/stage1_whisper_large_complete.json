@@ -1,0 +1,39 @@
+{
+  "model_size": "large",
+  "whisper_model": "large",
+  "whisper": {
+    "model_size": "large",
+    "language": "en",
+    "word_timestamps": true,
+    "verbose": false,
+    "task": "transcribe",
+    "temperature": 0,
+    "best_of": 5,
+    "beam_size": 5,
+    "patience": 1.0,
+    "length_penalty": 1.0,
+    "suppress_tokens": "-1",
+    "condition_on_previous_text": true,
+    "fp16": false,
+    "compression_ratio_threshold": 2.4,
+    "logprob_threshold": -1.0,
+    "no_speech_threshold": 0.6,
+    "initial_prompt": null
+  },
+  "audio_processing": {
+    "sample_rate": 16000,
+    "n_mfcc": 13,
+    "n_mels": 80,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "normalize": true
+  },
+  "features": {
+    "mfcc": true,
+    "mel_spectrogram": true,
+    "spectral_features": true,
+    "zero_crossing_rate": true,
+    "rms_energy": true
+  }
+}
+
